@@ -49,8 +49,8 @@ def describe_brute():
 
         def it_correctly_breaks_pass(mocker, brute):
             mock_random_guess = mocker.patch.object(brute, "randomGuess", return_value="po")
-            mock_random_guess.assert_called_once_with()
             assert brute.bruteMany() is not -1
+            mock_random_guess.assert_called_once_with()
 
         def it_doesnt_breaks_pass_with_wrong_random(mocker, brute):
             mock_random_guess = mocker.patch.object(brute, "randomGuess", return_value="NOT")
