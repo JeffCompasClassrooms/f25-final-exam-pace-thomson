@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest==7.4.4 pytest-spec requests pytest-describe
+          pip install pytest==7.4.4 pytest-spec requests pytest-describe pytest-mock
 
       - name: Debug — list files
         run: ls -R
@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest==7.4.4 pytest-spec requests pytest-describe
+          pip install pytest==7.4.4 pytest-spec requests pytest-describe pytest-mock
 
       - name: Debug — list files
         run: ls -R
